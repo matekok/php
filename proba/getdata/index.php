@@ -6,15 +6,19 @@ if (!$test)
 set_time_limit(60);
 
 $dataId = $_GET['id'];
-$proxy = '80.211.13.152:3128';
+$proxy = '50.233.137.36:80';
 $table = 'sportevents';
 $dbh = null;
 $html = null;
 
+if($dataId>=2000) exit();
+
 $html = getHtml();
-print 'chars: ' . strlen($html) . '<br>';
-$dataStoll = getData();
-if (strlen($html) > 0) {
+print 'chars: ' . strlen($html) . '<br>'.$dataId.'<br>';
+
+if (strlen($html) > 14000) {
+    //if access data
+    $dataStoll = getData();
     $dataPost = array(
         'id' => $dataId,
         'name' => 'test',
@@ -39,8 +43,14 @@ if (strlen($html) > 0) {
         print_r($dataBack);
         print '</pre>';
     }
+    $dataId++;
+}
+else if(strlen($html) > 1000){
+    //if data is lost
+    $dataId++;
 }
 
+echo '<script>window.location.href = "index.php?id='.$dataId.'";</script>';
 
 function connectDb() {
     global $dbh;
@@ -212,10 +222,10 @@ function getHtml() {
     global $dataId;
     $url = 'http://radmarathon.at/termine/detail_event.php?rmlang=en&id=' . $dataId;
     $aContext = array(
-            /* 'http' => array(
+             'http' => array(
               'proxy' => 'tcp://' . $proxy,
               'request_fulluri' => true,
-              ), */
+              ), 
     );
     $cxContext = stream_context_create($aContext);
     $html = file_get_contents($url, False, $cxContext);
