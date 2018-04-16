@@ -524,13 +524,6 @@ CREATE TABLE `sportevents` (
 -- Dumping data for table `sportevents`
 --
 
-INSERT INTO `sportevents` (`id`, `name`, `location`, `organizator`, `contact`, `phone`, `fax`, `email`, `homepage`, `datetime`, `htmlC`) VALUES
-(835, 'Gran Fondo Giro d´Italia Vienna', 'Wien (Wien)', 'MIDEAS Event und Promotion GmbH', '', '', '+43 1 2533 03325 13', 'giro@granfondovienna.com', 'www.granfondovienna.com', '2018-04-06 16:01:46', 27709),
-(836, '11. Bergrennen des SC-MTB Stevens Mirnock', NULL, 'SC-MTB Stevens Mirnock', 'Norbert Unterköfler', '0699 14145101', '04246 5104', 'sc-mtb-mirnock@gmx.at', 'www.facebook.com/mirnock', '2018-04-06 16:00:30', 20711),
-(837, 'Enduro Gradec', NULL, 'Radlager Mountainbikeverein', 'Christoph Berger-Schauer', '+43 (0) 664 88747690', '', 'christoph@lines-mag.at', 'enduro-gradec.at', '2018-04-06 15:58:59', 27172),
-(838, 'Skinfit Guntenlauf', NULL, 'ÖAV Dornbirn', 'Andrea Hollenstein, Klaus Drexel', '+43 (0)55 72/321 53', '', 'kd@guntenlauf.at', 'www.guntenlauf.at', '2018-04-06 15:56:41', 20676),
-(840, '25. Mugelberglauf', NULL, 'WSV Niklasdorf', 'Kure Wolfgang', '0660/6811136', '', 'monsterwowo@gmx.at', 'www.wsv-niklasdorf.at/indexmugelberglauf.htm', '2018-04-06 15:39:50', 22027);
-
 --
 -- Indexes for dumped tables
 --
