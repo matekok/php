@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    /*overflow: hidden;*/
+}
+
+.header {
+    min-height: 42px;
+}
+.wrapper {
+    overflow: hidden;
+    height: calc(100% - 120px); 
+}
+.footer{
+    min-height: 60px;
+}
