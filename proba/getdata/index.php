@@ -220,7 +220,7 @@ function insertRow($table = NULL, $values = array(), $fields = array(), $prie = 
 function getHtml() {
     global $proxy;
     global $dataId;
-    $url = 'http://radmarathon.at/termine/detail_event.php?rmlang=en&id=' . $dataId;
+    $url = '';
     $aContext = array(
              'http' => array(
               'proxy' => 'tcp://' . $proxy,
